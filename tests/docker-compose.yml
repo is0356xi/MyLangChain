@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  cuda:
+    # image: nvidia/cuda:11.8.0-devel-ubuntu20.04
+    image: cuda-11.8
+    environment:
+      - CUDNN_VERSION=8.9.1.23  # CUDNNのバージョン
+      - isMultiGPU=False        # MultiGPU環境かどうか
+      - WORLD_SIZE=1            # pthのファイル数
+
+    # リソースを拡張したい場合の指定（任意）
+    shm_size: 16gb
+    ulimits:
+      memlock: -1
+      stack: 67108864
+
+    # GPUを有効にする（docker-compose 1.28.0以上で対応）
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+
+    # 永続起動on
+    tty: true
+
+    # ローカルPCのフォルダをコンテナ上にマウントする
+    volumes:
+      - C:\source\path\:/home/
+      - D:\source\path\:/Downloads/

@@ -1,0 +1,7 @@
+nomic
+numpy==1.24.0
+sentencepiece==0.1.98
+langchain
+pygpt4all
+peft
+transformers
