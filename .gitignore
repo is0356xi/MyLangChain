@@ -2,3 +2,4 @@ llama.cpp*
 *.ipynb_checkpoints*
 *pyenv*
 *demo*
+*chromedriver*
