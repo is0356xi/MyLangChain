@@ -1,0 +1,1 @@
+pip3 install --upgrade torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
