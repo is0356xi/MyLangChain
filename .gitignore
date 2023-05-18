@@ -4,3 +4,4 @@ llama.cpp*
 *demo*
 *chromedriver*
 ImageBind_Test/ImageBind*
+*.pt*
