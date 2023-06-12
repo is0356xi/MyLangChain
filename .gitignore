@@ -5,3 +5,4 @@ llama.cpp*
 *chromedriver*
 ImageBind_Test/ImageBind*
 *.pt*
+azure_openai_setup.ps1
